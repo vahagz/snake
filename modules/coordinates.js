@@ -37,4 +37,18 @@ module.exports = class Coordinates {
   equals(coords) {
     return Boolean(this.x == coords.x && this.y == coords.y);
   }
+
+  move(direction, count = 1) {
+    if (!['left', 'right', 'top', 'bot'].includes(direction)) throw new Error(`unknown direction => ${direction}`);
+
+    if        (direction === 'left') {
+      this.x -= count;
+    } else if (direction === 'right') {
+      this.x += count;
+    } else if (direction === 'top') {
+      this.y -= count;
+    } else if (direction === 'bot') {
+      this.y += count;
+    }
+  }
 };

@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "keypress": "^0.2.1"
+    "ansi": "^0.3.1",
+    "keypress": "^0.2.1",
+    "terminal-game-io": "^3.1.0"
   }
 }
